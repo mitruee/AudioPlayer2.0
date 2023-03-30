@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity  implements Runnable{
                     seekBarHint.setText("01:" + (timeTrack - 60));
                 }
 
-                // передвижение времени отсчёта трека
                 double percentTrack = progress / (double) seekBar.getMax();
                 seekBarHint.setX(seekBar.getX() + Math.round(seekBar.getWidth()*percentTrack*0.92));
 
@@ -62,7 +61,6 @@ public class MainActivity extends AppCompatActivity  implements Runnable{
                     MainActivity.this.seekBar.setProgress(0);
                 }
             }
-            // метод при начале перетаскивания ползунка по шкале
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
                 seekBarHint.setVisibility(View.INVISIBLE);
